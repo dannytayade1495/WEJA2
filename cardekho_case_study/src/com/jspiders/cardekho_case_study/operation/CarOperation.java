@@ -144,18 +144,16 @@ public class CarOperation {
 			int car_id = scanner.nextInt();
 			for (Car car : cars) {
 				if (car.getCar_id() == car_id) {
-					System.out.print("\nEnter new car name : ");
+					System.out.print("Enter new car name : ");
 					car.setName(scanner.next());
-					System.out.print("\nEnter new car brand : ");
+					System.out.print("Enter new car brand : ");
 					car.setBrand(scanner.next());
-					System.out.print("\nEnter new car fuel type : ");
+					System.out.print("Enter new car fuel type : ");
 					car.setFuel_type(scanner.next());
-					System.out.print("\nEnter new car price : ");
+					System.out.print("Enter new car price : ");
 					car.setPrice(scanner.nextDouble());
-					System.out.println("\nCar details updated..!!");
-				} else {
-					System.out.println("Invalid choice. Try again..!!");
-				}
+					System.out.println("Car details updated..!!");
+				} 
 			}
 		}
 	}
