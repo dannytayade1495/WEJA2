@@ -4,7 +4,9 @@ public class MyThread2 implements Runnable {
 	
 	@Override
 	public void run() {
-		System.out.println("MyThread2 is now running");
+		for (int i = 1; i <= 5; i++) {
+			System.out.println("MyThread 2 is now running. ");
+		}
 	}
 
 }
