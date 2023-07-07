@@ -5,8 +5,15 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.Runnable"/>
     <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.MyThread1"/>
     <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.MyThread2"/>
+    <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.MyThread3"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.MyThread4"/>
+    <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.MyThread5"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.Husband"/>
+    <fullyQualifiedTypeName name="com.jspiders.multithreading.main.AccountMain"/>
+    <fullyQualifiedTypeName name="com.jspiders.multithreading.resource.Account"/>
+    <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.Wife"/>
 </qualifiedTypeNameHistroy>
