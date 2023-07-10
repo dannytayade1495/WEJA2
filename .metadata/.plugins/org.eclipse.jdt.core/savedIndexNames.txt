@@ -1,5 +1,2 @@
-INDEX VERSION 1.131+C:\Users\Dhananjay\Desktop\J2EE Workspaces\WEJA2\.metadata\.plugins\org.eclipse.jdt.core
-2488715538.index
-3048360847.index
+INDEX VERSION 1.131+C:\Programs\WEJA2\.metadata\.plugins\org.eclipse.jdt.core
 1865797976.index
-1009081214.index
