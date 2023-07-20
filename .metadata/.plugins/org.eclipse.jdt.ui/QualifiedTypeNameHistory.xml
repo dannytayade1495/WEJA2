@@ -32,4 +32,6 @@
     <fullyQualifiedTypeName name="com.jspiders.designpatterns.creational.SingletonLazy"/>
     <fullyQualifiedTypeName name="com.jspiders.designpatterns.creational.SingletonEager"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.jspiders.designpatterns.creational.Contact"/>
+    <fullyQualifiedTypeName name="com.jspiders.designpatterns.creational.ContactBuilder"/>
 </qualifiedTypeNameHistroy>
