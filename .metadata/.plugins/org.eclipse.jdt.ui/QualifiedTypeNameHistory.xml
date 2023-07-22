@@ -34,4 +34,5 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="com.jspiders.designpatterns.creational.Contact"/>
     <fullyQualifiedTypeName name="com.jspiders.designpatterns.creational.ContactBuilder"/>
+    <fullyQualifiedTypeName name="com.jspiders.designpatterns.structural.Adapter"/>
 </qualifiedTypeNameHistroy>
