@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.SQLSyntaxErrorException;
 import java.sql.Statement;
 import java.util.Properties;
 import java.util.Scanner;
@@ -26,12 +28,16 @@ public class JdbcOperations1 {
 		// 1. Create a table
 		try {
 			openConnection();
+			try {
 			query = "create table stud_details "
 					+ "(sid int(3) primary key, name varchar(50),"
 					+ "email varchar(30), contact bigint(10))";
 			result = statement.executeUpdate(query);
 			System.out.println("Query OK, " + result 
 					+ " row(s) affected.");
+			} catch(SQLSyntaxErrorException e) {
+				System.out.println("Table already exists!");
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -55,8 +61,14 @@ public class JdbcOperations1 {
 				query = "insert into stud_details "
 						+ "values (" + sid + ",'"
 						+ name + "','" + email + "'," + contact + ")";
-				result = result + statement.executeUpdate(query);
+				try {
+					result = result + statement.executeUpdate(query);
+				} catch (SQLIntegrityConstraintViolationException e) {
+					System.out.println("Entered id already exists!"
+							+ "\nRecord not inserted! Try again!");
+				}
 			}
+			scanner.close();
 			System.out.println("Query OK, " + result 
 					+ " row(s) affected.");
 			
