@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.jspiders.multithreading.resource.Account"/>
-    <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.Wife"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
-    <fullyQualifiedTypeName name="com.jspiders.multithreading.resource.Pizza"/>
-    <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.Friends"/>
-    <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.Dominos"/>
-    <fullyQualifiedTypeName name="com.jspiders.multithreading.resource.Resource"/>
     <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.Thread1"/>
     <fullyQualifiedTypeName name="com.jspiders.multithreading.thread.Thread2"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
@@ -46,18 +39,25 @@
     <fullyQualifiedTypeName name="com.jspiders.hibernate.dto.Company"/>
     <fullyQualifiedTypeName name="com.jspiders.hibernate.dto.Employee"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
+    <fullyQualifiedTypeName name="com.jspiders.onetoone.dto.Person"/>
+    <fullyQualifiedTypeName name="com.jspiders.onetoone.dto.AadharCard"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="com.jspiders.onetomany.dto.Company"/>
+    <fullyQualifiedTypeName name="com.jspiders.onetomany.dto.Employee"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="com.jspiders.manytoone.dto.Player"/>
+    <fullyQualifiedTypeName name="com.jspiders.manytoone.dto.Team"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
     <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
-    <fullyQualifiedTypeName name="com.jspiders.onetoone.dto.Person"/>
-    <fullyQualifiedTypeName name="com.jspiders.onetoone.dto.AadharCard"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
-    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
-    <fullyQualifiedTypeName name="javax.persistence.Id"/>
-    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
-    <fullyQualifiedTypeName name="com.jspiders.onetomany.dto.Company"/>
+    <fullyQualifiedTypeName name="com.jspiders.manytomany.dto.Student"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.jspiders.onetomany.dto.Employee"/>
+    <fullyQualifiedTypeName name="com.jspiders.manytomany.dto.Course"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.persistence.Embeddable"/>
 </qualifiedTypeNameHistroy>
