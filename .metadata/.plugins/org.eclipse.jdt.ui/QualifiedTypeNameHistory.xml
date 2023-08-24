@@ -57,7 +57,7 @@
     <fullyQualifiedTypeName name="com.jspiders.onetomany.dto.School"/>
     <fullyQualifiedTypeName name="jakarta.servlet.GenericServlet"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
 </qualifiedTypeNameHistroy>

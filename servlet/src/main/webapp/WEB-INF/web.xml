@@ -6,6 +6,7 @@
 	id="WebApp_ID" version="5.0">
 	<display-name>servlet</display-name>
 	<welcome-file-list>
+		<welcome-file>Add.html</welcome-file>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
 		<welcome-file>index.htm</welcome-file>
@@ -23,8 +24,7 @@
 	</servlet>
 	<servlet>
 		<servlet-name>MyServlet3</servlet-name>
-		<servlet-class>com.jspiders.servlet.servlets.MyServlet3
-		</servlet-class>
+		<servlet-class>com.jspiders.servlet.servlets.MyServlet3</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>MyServlet4</servlet-name>
