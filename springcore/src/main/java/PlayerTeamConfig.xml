@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.jspiders.springcore.bean.PlayerBean"
+		name="player1">
+		<property name="id" value="1"/>
+		<property name="name" value="Dhoni"/>
+		<property name="team" ref="team1"/>
+	</bean>
+	
+	<bean class="com.jspiders.springcore.bean.PlayerBean"
+		name="player2">
+		<property name="id" value="2"/>
+		<property name="name" value="Jadeja"/>
+		<property name="team" ref="team1"/>
+	</bean>
+	
+	<bean class="com.jspiders.springcore.bean.TeamBean"
+		name="team1">
+		<property name="id" value="1"/>
+		<property name="name" value="CSK"/>
+	</bean>
+
+</beans>

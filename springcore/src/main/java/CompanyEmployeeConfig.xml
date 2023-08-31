@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.jspiders.springcore.bean.CompanyBean"
+		name="company1">
+		<property name="id" value="1" />
+		<property name="name" value="TCS" />
+		<property name="employees">
+			<list>
+				<bean class="com.jspiders.springcore.bean.EmployeeBean"
+					name="employee1">
+					<property name="id" value="1"/>
+					<property name="name" value="Aman"/>
+					<property name="address" value="Ravet"/>
+				</bean>
+				<bean class="com.jspiders.springcore.bean.EmployeeBean"
+					name="employee2">
+					<property name="id" value="2"/>
+					<property name="name" value="Suman"/>
+					<property name="address" value="Hinjewadi"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+</beans>
