@@ -1,10 +1,20 @@
 package com.jspiders.springmvc.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.jspiders.springmvc.pojo.StudentPOJO;
+import com.jspiders.springmvc.service.StudentService;
 
 @Controller
 public class StudentController {
+	
+	@Autowired
+	private StudentService service;
 
 	//Home page Controller
 	@GetMapping("/home")
@@ -15,6 +25,25 @@ public class StudentController {
 	//Add page Controller
 	@GetMapping("/add")
 	public String addPage() {
+		return "Add";
+	}
+	
+	//Add student Controller
+	@PostMapping("/add")
+	public String addStudent(@RequestParam String name,
+								@RequestParam String email,
+								@RequestParam long contact,
+								@RequestParam String address,
+								ModelMap map) {
+		StudentPOJO pojo = service.addStudent(name, email, contact, address);
+		
+		//Success
+		if (pojo != null) {
+			map.addAttribute("msg","Data inserted successfully..!");
+			return "Add";
+		}
+		//Failure
+		map.addAttribute("msg","Data not inserted..!");
 		return "Add";
 	}
 	
