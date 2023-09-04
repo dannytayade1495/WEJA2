@@ -21,6 +21,8 @@ legend {
 	color: white;
 	background-color: #333;
 }
+
+
 </style>
 </head>
 <body>

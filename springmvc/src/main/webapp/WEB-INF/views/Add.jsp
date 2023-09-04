@@ -24,6 +24,7 @@ legend {
 	color: white;
 	background-color: #333;
 }
+
 </style>
 </head>
 <body>
@@ -55,8 +56,8 @@ legend {
 		<%
 		if (msg != null) {
 		%>
-		<h1><%=msg%>
-		</h1>
+		<h3><%=msg%>
+		</h3>
 		<%
 		}
 		%>
