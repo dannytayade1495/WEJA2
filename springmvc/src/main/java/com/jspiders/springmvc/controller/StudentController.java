@@ -53,6 +53,22 @@ public class StudentController {
 		return "Search";
 	}
 	
+	//Search student Controller
+	@PostMapping("/search")
+	public String searchStudent(@RequestParam int id,
+								ModelMap map) {
+		StudentPOJO pojo = service.searchStudent(id);
+		//Success
+		if (pojo != null) {
+			map.addAttribute("student",pojo);
+			map.addAttribute("msg","Student data found..!");
+			return "Search";
+		}
+		//Failure
+		map.addAttribute("msg", "Student data not found..!");
+		return "Search";
+	}
+	
 	//Remove page Controller
 	@GetMapping("/remove")
 	public String removePage() {

@@ -53,4 +53,15 @@ public class StudentRepository {
 		return pojo;
 	}
 
+	public StudentPOJO searchStudent(int id) {
+		openConnection();
+		transaction.begin();
+		
+		StudentPOJO pojo = manager.find(StudentPOJO.class, id);
+		
+		transaction.commit();
+		closeConnection();
+		return pojo;
+	}
+
 }
