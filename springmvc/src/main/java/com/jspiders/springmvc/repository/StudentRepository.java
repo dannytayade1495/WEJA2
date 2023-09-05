@@ -1,9 +1,12 @@
 package com.jspiders.springmvc.repository;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +18,7 @@ public class StudentRepository {
 	private static EntityManagerFactory factory;
 	private static EntityManager manager;
 	private static EntityTransaction transaction;
+	private static Query query;
 	
 	private static void openConnection() {
 		factory = Persistence.createEntityManagerFactory("mvc");
@@ -62,6 +66,17 @@ public class StudentRepository {
 		transaction.commit();
 		closeConnection();
 		return pojo;
+	}
+
+	public List<StudentPOJO> findAllStudents() {
+		openConnection();
+		transaction.begin();
+		String jpql = "from StudentPOJO";
+		query = manager.createQuery(jpql);
+		List<StudentPOJO> students = query.getResultList();
+		transaction.commit();
+		closeConnection();
+		return students;
 	}
 
 }

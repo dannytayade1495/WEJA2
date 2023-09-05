@@ -1,5 +1,7 @@
 package com.jspiders.springmvc.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -71,7 +73,14 @@ public class StudentController {
 	
 	//Remove page Controller
 	@GetMapping("/remove")
-	public String removePage() {
+	public String removePage(ModelMap map) {
+		List<StudentPOJO> students = service.findAllStudents();
+		//Success
+		if (!students.isEmpty()) {
+			map.addAttribute("students", students);
+			return "Remove";
+		}
+		map.addAttribute("msg", "No data present..!");
 		return "Remove";
 	}
 	

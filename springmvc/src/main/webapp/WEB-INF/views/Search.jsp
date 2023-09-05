@@ -12,6 +12,19 @@ String msg = (String) request.getAttribute("msg");
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+form {
+	margin-top: 10px;
+}
+
+form table {
+	margin: auto;
+	width: 100%;
+}
+
+tr {
+	text-align: center;
+}
+
 fieldset table {
 	margin: auto;
 	text-align: left;
@@ -25,6 +38,18 @@ fieldset {
 legend {
 	color: white;
 	background-color: #333;
+}
+
+#data {
+	background-color: white;
+	border: 1px solid black;
+	width: 100%;
+	border: 1px solid black;
+}
+
+#data td {
+	border: 1px solid black;
+	text-align: center;
 }
 </style>
 </head>
@@ -53,13 +78,13 @@ legend {
 		<%
 		if (pojo != null) {
 		%>
-		<table>
+		<table id="data">
 			<tr>
-				<td>ID</td>
-				<td>NAME</td>
-				<td>EMAIL</td>
-				<td>CONTACT</td>
-				<td>ADDRESS</td>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>EMAIL</th>
+				<th>CONTACT</th>
+				<th>ADDRESS</th>
 			</tr>
 			<tr>
 				<td><%=pojo.getId()%></td>
