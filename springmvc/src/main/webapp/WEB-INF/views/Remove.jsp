@@ -13,6 +13,19 @@ String msg = (String) request.getAttribute("msg");
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+form {
+	margin-top: 10px;
+}
+
+form table {
+	margin: auto;
+	width: 100%;
+}
+
+tr {
+	text-align: center;
+}
+
 fieldset table {
 	margin: auto;
 	text-align: left;
@@ -27,12 +40,24 @@ legend {
 	color: white;
 	background-color: #333;
 }
+
+#data {
+	background-color: white;
+	border: 1px solid black;
+	width: 100%;
+	border: 1px solid black;
+}
+
+#data td {
+	border: 1px solid black;
+	text-align: center;
+}
 </style>
 </head>
 <body>
 	<div align="center">
 		<fieldset>
-			<legend></legend>
+			<legend>Remove Student Details</legend>
 			<form action="./remove" method="post">
 				<table>
 					<tr>
@@ -55,7 +80,7 @@ legend {
 		<%
 		if (students != null) {
 		%>
-		<table>
+		<table id="data">
 			<tr>
 				<th>ID</th>
 				<th>NAME</th>

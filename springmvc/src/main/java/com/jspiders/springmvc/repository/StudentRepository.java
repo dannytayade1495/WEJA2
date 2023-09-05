@@ -79,4 +79,18 @@ public class StudentRepository {
 		return students;
 	}
 
+	public StudentPOJO removeStudent(int id) {
+		openConnection();
+		transaction.begin();
+		
+		StudentPOJO pojo = manager.find(StudentPOJO.class, id);
+		if (pojo != null) {
+			manager.remove(pojo);
+		}
+		
+		transaction.commit();
+		closeConnection();
+		return pojo;
+	}
+
 }

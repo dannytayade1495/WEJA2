@@ -26,7 +26,12 @@ public class StudentController {
 	
 	//Add page Controller
 	@GetMapping("/add")
-	public String addPage() {
+	public String addPage(ModelMap map) {
+		List<StudentPOJO> students = service.findAllStudents();
+		if (!students.isEmpty()) {
+			map.addAttribute("students", students);
+			return "Add";
+		}
 		return "Add";
 	}
 	
@@ -42,10 +47,16 @@ public class StudentController {
 		//Success
 		if (pojo != null) {
 			map.addAttribute("msg","Data inserted successfully..!");
+			List<StudentPOJO> students = service.findAllStudents();
+			map.addAttribute("students", students);
 			return "Add";
 		}
 		//Failure
 		map.addAttribute("msg","Data not inserted..!");
+		List<StudentPOJO> students = service.findAllStudents();
+		if (!students.isEmpty()) {
+			map.addAttribute("students", students);
+		}
 		return "Add";
 	}
 	
@@ -81,6 +92,25 @@ public class StudentController {
 			return "Remove";
 		}
 		map.addAttribute("msg", "No data present..!");
+		return "Remove";
+	}
+	
+	//Remove student Controller
+	@PostMapping("/remove")
+	public String removeStudent(@RequestParam int id,
+								ModelMap map) {
+		StudentPOJO pojo = service.removeStudent(id);
+		List<StudentPOJO> students = service.findAllStudents();
+		
+		//Success
+		if (pojo != null) {
+			map.addAttribute("msg", "Data removed successfully..!");
+			map.addAttribute("students", students);
+			return "Remove";
+		}
+		//Failure
+		map.addAttribute("msg", "Data does not exist..!");
+		map.addAttribute("students", students);
 		return "Remove";
 	}
 	

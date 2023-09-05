@@ -29,4 +29,9 @@ public class StudentService {
 		return students;
 	}
 
+	public StudentPOJO removeStudent(int id) {
+		StudentPOJO pojo = repository.removeStudent(id);
+		return pojo;
+	}
+
 }
