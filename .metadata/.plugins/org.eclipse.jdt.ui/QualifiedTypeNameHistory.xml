@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="com.jspiders.onetomany.dto.Student"/>
-    <fullyQualifiedTypeName name="javax.persistence.Query"/>
     <fullyQualifiedTypeName name="com.jspiders.hibernate.dto.EmployeeDTO"/>
     <fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
     <fullyQualifiedTypeName name="com.jspiders.onetomany.dto.School"/>
@@ -17,7 +16,6 @@
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="com.jspiders.springcore.bean.StudentBean"/>
     <fullyQualifiedTypeName name="com.jspiders.springcore.bean.PersonBean"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.jspiders.springcore.bean.CompanyBean"/>
     <fullyQualifiedTypeName name="com.jspiders.springcore.bean.TeamBean"/>
     <fullyQualifiedTypeName name="com.jspiders.springcore.bean.PlayerBean"/>
@@ -45,8 +43,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
@@ -58,6 +54,10 @@
     <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
     <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
-    <fullyQualifiedTypeName name="com.jspiders.springmvc.pojo.StudentPOJO"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.persistence.Query"/>
     <fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="com.jspiders.springmvc.pojo.StudentPOJO"/>
 </qualifiedTypeNameHistroy>

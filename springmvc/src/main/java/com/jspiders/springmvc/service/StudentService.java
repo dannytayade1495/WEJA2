@@ -34,4 +34,9 @@ public class StudentService {
 		return pojo;
 	}
 
+	public StudentPOJO updateStudent(int id, String name, String email, long contact, String address) {
+		StudentPOJO pojo = repository.updateStudent(id, name, email, contact, address);
+		return pojo;
+	}
+
 }

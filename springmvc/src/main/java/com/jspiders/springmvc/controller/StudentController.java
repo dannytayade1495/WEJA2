@@ -116,7 +116,48 @@ public class StudentController {
 	
 	//Update page Controller
 	@GetMapping("/update")
-	public String updatePage() {
+	public String updatePage(ModelMap map) {
+		List<StudentPOJO> students = service.findAllStudents();
+		map.addAttribute("students", students);
+		return "Update";
+	}
+	
+	//Update form Controller
+	@PostMapping("/update")
+	public String updateForm(@RequestParam int id,
+								ModelMap map) {
+		StudentPOJO pojo = service.searchStudent(id);
+		//Success
+		if (pojo != null) {
+			map.addAttribute("student",pojo);
+			return "Update";
+		}
+		//Failure
+		List<StudentPOJO> students = service.findAllStudents();
+		map.addAttribute("students", students);
+		map.addAttribute("msg", "Student data not found..!");
+		return "Update";
+	}
+	
+	//Update student Controller
+	@PostMapping("/updateStudent")
+	public String updateStudent(@RequestParam int id,
+								@RequestParam String name,
+								@RequestParam String email,
+								@RequestParam long contact,
+								@RequestParam String address,
+								ModelMap map) {
+		StudentPOJO pojo = service.updateStudent(id, name, email, contact, address);
+		//Success
+		if (pojo != null) {
+			List<StudentPOJO> students = service.findAllStudents();
+			map.addAttribute("msg", "Data updated successfully..!");
+			map.addAttribute("students", students);
+			return "Update";
+		}
+		List<StudentPOJO> students = service.findAllStudents();
+		map.addAttribute("msg", "Data not updated..!");
+		map.addAttribute("students", students);
 		return "Update";
 	}
 	
