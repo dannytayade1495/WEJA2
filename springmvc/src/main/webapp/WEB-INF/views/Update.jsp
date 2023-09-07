@@ -61,7 +61,7 @@ legend {
 		if (pojo == null) {
 		%>
 		<fieldset>
-			<legend>Select Student to Update</legend>
+			<legend>Select Student</legend>
 			<form action="./update" method="post">
 				<table>
 					<tr>
