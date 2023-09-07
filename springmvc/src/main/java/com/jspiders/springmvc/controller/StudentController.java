@@ -161,10 +161,4 @@ public class StudentController {
 		return "Update";
 	}
 	
-	//Logout Controller
-	@GetMapping("/logout")
-	public String logout() {
-		return "Login";
-	}
-
 }

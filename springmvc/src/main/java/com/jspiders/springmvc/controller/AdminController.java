@@ -45,5 +45,26 @@ public class AdminController {
 		map.addAttribute("msg", "Account not created..!");
 		return "Login";
 	}
+	
+	//Login Controller
+	@PostMapping("/login")
+	public String login(@RequestParam String username,
+						@RequestParam String password,
+						ModelMap map) {
+		AdminPOJO pojo = service.login(username, password);
+		//Success
+		if (pojo != null) {
+			return "Home";
+		}
+		map.addAttribute("msg", "Invalid username or password..!");
+		return "Login";
+	}
+	
+	//Logout Controller
+		@GetMapping("/logout")
+		public String logout(ModelMap map) {
+			map.addAttribute("msg", "Logged out successfully..!");
+			return "Login";
+		}
 
 }
