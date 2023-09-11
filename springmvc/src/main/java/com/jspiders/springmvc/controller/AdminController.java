@@ -57,7 +57,7 @@ public class AdminController {
 		//Success
 		if (pojo != null) {
 			session.setAttribute("login", pojo);
-			session.setMaxInactiveInterval(10);
+			session.setMaxInactiveInterval(100);
 			return "Home";
 		}
 		map.addAttribute("msg", "Invalid username or password..!");
